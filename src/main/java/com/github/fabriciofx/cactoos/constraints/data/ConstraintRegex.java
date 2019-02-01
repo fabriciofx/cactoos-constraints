@@ -1,4 +1,4 @@
-package com.github.fabriciofx.cactoos.constraints.constraint;
+package com.github.fabriciofx.cactoos.constraints.data;
 
 import com.github.fabriciofx.cactoos.constraints.Constraint;
 import com.github.fabriciofx.cactoos.constraints.Evaluation;

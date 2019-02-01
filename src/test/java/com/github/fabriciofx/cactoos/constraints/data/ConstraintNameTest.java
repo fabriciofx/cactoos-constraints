@@ -1,13 +1,14 @@
-package com.github.fabriciofx.cactoos.constraints.constraint;
+package com.github.fabriciofx.cactoos.constraints.data;
 
-import com.github.fabriciofx.cactoos.constraints.Evaluation;
 import com.github.fabriciofx.cactoos.constraints.Constraints;
+import com.github.fabriciofx.cactoos.constraints.Evaluation;
 import org.cactoos.text.FormattedText;
 import org.cactoos.text.JoinedText;
 import org.hamcrest.core.IsEqual;
 import org.junit.Test;
 import org.llorllale.cactoos.matchers.Assertion;
 import org.llorllale.cactoos.matchers.IsTrue;
+import org.llorllale.cactoos.matchers.TextIs;
 
 public final class ConstraintNameTest {
     @Test
@@ -62,13 +63,13 @@ public final class ConstraintNameTest {
         ).evaluation();
         new Assertion<>(
             "Can't check if is an upped invalid name",
-            () -> new JoinedText(", ", result.reasons()).asString(),
-            new IsEqual<>(
+            () -> new JoinedText(", ", result.reasons()),
+            new TextIs(
                 new FormattedText(
                     "Name %s is invalid, %s is not upped",
                     name,
                     name
-                ).asString()
+                )
             )
         ).affirm();
 

@@ -27,4 +27,4 @@
  *
  * @since 0.1
  */
-package com.github.fabriciofx.cactoos.constraints.constraint;
+package com.github.fabriciofx.cactoos.constraints.data;
