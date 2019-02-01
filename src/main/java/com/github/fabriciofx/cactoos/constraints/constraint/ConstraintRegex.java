@@ -1,7 +1,7 @@
-package com.github.fabriciofx.cc.constraint;
+package com.github.fabriciofx.cactoos.constraints.constraint;
 
-import com.github.fabriciofx.cc.CheckedResult;
-import com.github.fabriciofx.cc.Constraint;
+import com.github.fabriciofx.cactoos.constraints.CheckedResult;
+import com.github.fabriciofx.cactoos.constraints.Constraint;
 import java.util.regex.Pattern;
 
 public final class ConstraintRegex implements Constraint {

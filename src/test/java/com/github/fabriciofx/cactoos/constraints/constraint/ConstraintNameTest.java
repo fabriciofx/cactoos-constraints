@@ -1,7 +1,7 @@
-package com.github.fabriciofx.cc.constraint;
+package com.github.fabriciofx.cactoos.constraints.constraint;
 
-import com.github.fabriciofx.cc.CheckedResult;
-import com.github.fabriciofx.cc.Constraints;
+import com.github.fabriciofx.cactoos.constraints.CheckedResult;
+import com.github.fabriciofx.cactoos.constraints.Constraints;
 import org.cactoos.text.FormattedText;
 import org.cactoos.text.JoinedText;
 import org.hamcrest.core.IsEqual;
