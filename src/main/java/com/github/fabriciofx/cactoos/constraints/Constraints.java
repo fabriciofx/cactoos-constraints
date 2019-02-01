@@ -16,16 +16,16 @@ public final class Constraints implements Constraint {
     }
 
     @Override
-    public CheckedResult checked() {
+    public Evaluation evaluation() {
         final List<String> reasons = new LinkedList<>();
-        boolean valid = true;
+        boolean success = true;
         for (final Constraint constraint : this.constraints) {
-            final CheckedResult result = constraint.checked();
-            valid = valid && result.ok();
-            if (!result.ok()) {
-                reasons.addAll(new ListOf<>(result.reasons()));
+            final Evaluation eval = constraint.evaluation();
+            success = success && eval.success();
+            if (!eval.success()) {
+                reasons.addAll(new ListOf<>(eval.reasons()));
             }
         }
-        return new CheckedResult(valid, reasons);
+        return new Evaluation(success, reasons);
     }
 }

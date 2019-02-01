@@ -1,6 +1,6 @@
 package com.github.fabriciofx.cactoos.constraints.constraint;
 
-import com.github.fabriciofx.cactoos.constraints.CheckedResult;
+import com.github.fabriciofx.cactoos.constraints.Evaluation;
 import com.github.fabriciofx.cactoos.constraints.Constraints;
 import org.cactoos.text.FormattedText;
 import org.cactoos.text.JoinedText;
@@ -14,7 +14,7 @@ public final class ConstraintNameTest {
     public void checkIsValidName() {
         new Assertion<>(
             "Can't check if is an valid name",
-            () -> new ConstraintName("Fabricio Barros Cabral").checked().ok(),
+            () -> new ConstraintName("Fabricio Barros Cabral").evaluation().success(),
             new IsTrue()
         ).affirm();
     }
@@ -22,10 +22,10 @@ public final class ConstraintNameTest {
     @Test
     public void checkIsInvalidName() throws Exception {
         final String name = "Fabrici0 Barros Cabral";
-        final CheckedResult result = new ConstraintName(name).checked();
+        final Evaluation result = new ConstraintName(name).evaluation();
         new Assertion<>(
             "Can't check if is an invalid name",
-            () -> result.ok(),
+            () -> result.success(),
             new IsEqual<>(false)
         ).affirm();
         new Assertion<>(
@@ -48,7 +48,7 @@ public final class ConstraintNameTest {
             () -> new Constraints(
                 new ConstraintName(name),
                 new ConstraintUpped(name)
-            ).checked().ok(),
+            ).evaluation().success(),
             new IsTrue()
         ).affirm();
     }
@@ -56,10 +56,10 @@ public final class ConstraintNameTest {
     @Test
     public void checkIsUppedInvalidName() throws Exception {
         final String name = "F4BRICIo BARROS CABRAL";
-        final CheckedResult result = new Constraints(
+        final Evaluation result = new Constraints(
             new ConstraintName(name),
             new ConstraintUpped(name)
-        ).checked();
+        ).evaluation();
         new Assertion<>(
             "Can't check if is an upped invalid name",
             () -> new JoinedText(", ", result.reasons()).asString(),

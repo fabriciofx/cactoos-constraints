@@ -1,6 +1,6 @@
 package com.github.fabriciofx.cactoos.constraints.constraint;
 
-import com.github.fabriciofx.cactoos.constraints.CheckedResult;
+import com.github.fabriciofx.cactoos.constraints.Evaluation;
 import com.github.fabriciofx.cactoos.constraints.Constraint;
 import org.cactoos.text.FormattedText;
 import org.cactoos.text.UncheckedText;
@@ -19,7 +19,7 @@ public final class ConstraintCep implements Constraint {
     }
 
     @Override
-    public CheckedResult checked() {
-        return this.origin.checked();
+    public Evaluation evaluation() {
+        return this.origin.evaluation();
     }
 }

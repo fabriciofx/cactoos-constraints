@@ -1,6 +1,6 @@
 package com.github.fabriciofx.cactoos.constraints.constraint;
 
-import com.github.fabriciofx.cactoos.constraints.CheckedResult;
+import com.github.fabriciofx.cactoos.constraints.Evaluation;
 import com.github.fabriciofx.cactoos.constraints.Constraint;
 import java.util.regex.Pattern;
 
@@ -28,13 +28,13 @@ public final class ConstraintRegex implements Constraint {
     }
 
     @Override
-    public CheckedResult checked() {
-        final CheckedResult result;
+    public Evaluation evaluation() {
+        final Evaluation eval;
         if (!this.pattern.matcher(this.data).matches()) {
-            result = new CheckedResult(false, this.reason);
+            eval = new Evaluation(false, this.reason);
         } else {
-            result = new CheckedResult(true);
+            eval = new Evaluation(true);
         }
-        return result;
+        return eval;
     }
 }
