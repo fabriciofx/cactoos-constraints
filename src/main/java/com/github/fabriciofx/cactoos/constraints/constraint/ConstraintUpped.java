@@ -1,9 +1,8 @@
 package com.github.fabriciofx.cactoos.constraints.constraint;
 
-import com.github.fabriciofx.cactoos.constraints.Evaluation;
 import com.github.fabriciofx.cactoos.constraints.Constraint;
+import com.github.fabriciofx.cactoos.constraints.Evaluation;
 import org.cactoos.text.FormattedText;
-import org.cactoos.text.UncheckedText;
 
 public final class ConstraintUpped implements Constraint {
     private final Constraint origin;
@@ -11,9 +10,7 @@ public final class ConstraintUpped implements Constraint {
     public ConstraintUpped(final String string) {
         this.origin = new ConstraintRegex(
             "[A-Z\\-'\\s]+",
-            new UncheckedText(
-                new FormattedText("%s is not upped", string)
-            ).asString(),
+            new FormattedText("%s is not upped", string),
             string
         );
     }

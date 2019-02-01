@@ -1,9 +1,8 @@
 package com.github.fabriciofx.cactoos.constraints.constraint;
 
-import com.github.fabriciofx.cactoos.constraints.Evaluation;
 import com.github.fabriciofx.cactoos.constraints.Constraint;
+import com.github.fabriciofx.cactoos.constraints.Evaluation;
 import org.cactoos.text.FormattedText;
-import org.cactoos.text.UncheckedText;
 
 public final class ConstraintCep implements Constraint {
     private final Constraint origin;
@@ -11,9 +10,7 @@ public final class ConstraintCep implements Constraint {
     public ConstraintCep(final String cep) {
         this.origin = new ConstraintRegex(
             "[0-9]{3}-[0-9]{5}",
-            new UncheckedText(
-                new FormattedText("CEP %s is invalid", cep)
-            ).asString(),
+            new FormattedText("CEP %s is invalid", cep),
             cep
         );
     }

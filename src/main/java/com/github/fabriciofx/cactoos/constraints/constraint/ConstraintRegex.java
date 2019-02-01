@@ -1,17 +1,19 @@
 package com.github.fabriciofx.cactoos.constraints.constraint;
 
-import com.github.fabriciofx.cactoos.constraints.Evaluation;
 import com.github.fabriciofx.cactoos.constraints.Constraint;
+import com.github.fabriciofx.cactoos.constraints.Evaluation;
 import java.util.regex.Pattern;
+import org.cactoos.Text;
+import org.cactoos.text.UncheckedText;
 
 public final class ConstraintRegex implements Constraint {
     private final Pattern pattern;
-    private final String reason;
+    private final Text reason;
     private final String data;
 
     public ConstraintRegex(
         final String regex,
-        final String reason,
+        final Text reason,
         final String data
     ) {
         this(Pattern.compile(regex), reason, data);
@@ -19,7 +21,7 @@ public final class ConstraintRegex implements Constraint {
 
     public ConstraintRegex(
         final Pattern pttrn,
-        final String reason,
+        final Text reason,
         final String data
     ) {
         this.pattern = pttrn;
@@ -31,7 +33,10 @@ public final class ConstraintRegex implements Constraint {
     public Evaluation evaluation() {
         final Evaluation eval;
         if (!this.pattern.matcher(this.data).matches()) {
-            eval = new Evaluation(false, this.reason);
+            eval = new Evaluation(
+                false,
+                new UncheckedText(this.reason).asString()
+            );
         } else {
             eval = new Evaluation(true);
         }
