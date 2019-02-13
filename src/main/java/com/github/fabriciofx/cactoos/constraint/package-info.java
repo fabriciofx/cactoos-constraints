@@ -23,8 +23,8 @@
  */
 
 /**
- * Cactoos Constraints.
+ * Cactoos constraints.
  *
  * @since 0.1
  */
-package com.github.fabriciofx.cactoos.constraints;
+package com.github.fabriciofx.cactoos.constraint;

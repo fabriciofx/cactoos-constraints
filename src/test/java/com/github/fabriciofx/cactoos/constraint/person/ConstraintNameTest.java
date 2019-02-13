@@ -1,7 +1,9 @@
-package com.github.fabriciofx.cactoos.constraints.data;
+package com.github.fabriciofx.cactoos.constraint.person;
 
-import com.github.fabriciofx.cactoos.constraints.Constraints;
-import com.github.fabriciofx.cactoos.constraints.Evaluation;
+import com.github.fabriciofx.cactoos.constraint.Constraints;
+import com.github.fabriciofx.cactoos.constraint.Evaluation;
+import com.github.fabriciofx.cactoos.constraint.base.ConstraintUpped;
+import com.github.fabriciofx.cactoos.constraint.person.ConstraintName;
 import org.cactoos.text.FormattedText;
 import org.cactoos.text.JoinedText;
 import org.hamcrest.core.IsEqual;

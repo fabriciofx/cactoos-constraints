@@ -1,7 +1,7 @@
-package com.github.fabriciofx.cactoos.constraints.data;
+package com.github.fabriciofx.cactoos.constraint.person;
 
-import com.github.fabriciofx.cactoos.constraints.Constraint;
-import com.github.fabriciofx.cactoos.constraints.Evaluation;
+import com.github.fabriciofx.cactoos.constraint.Constraint;
+import com.github.fabriciofx.cactoos.constraint.Evaluation;
 import org.cactoos.text.FormattedText;
 import org.cactoos.text.UncheckedText;
 

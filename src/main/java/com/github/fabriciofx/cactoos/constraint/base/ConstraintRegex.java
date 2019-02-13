@@ -1,7 +1,7 @@
-package com.github.fabriciofx.cactoos.constraints.data;
+package com.github.fabriciofx.cactoos.constraint.base;
 
-import com.github.fabriciofx.cactoos.constraints.Constraint;
-import com.github.fabriciofx.cactoos.constraints.Evaluation;
+import com.github.fabriciofx.cactoos.constraint.Constraint;
+import com.github.fabriciofx.cactoos.constraint.Evaluation;
 import java.util.regex.Pattern;
 import org.cactoos.Text;
 import org.cactoos.text.UncheckedText;

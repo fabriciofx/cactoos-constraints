@@ -23,8 +23,8 @@
  */
 
 /**
- * Cactoos Constraints.
+ * Cactoos person constraints.
  *
  * @since 0.1
  */
-package com.github.fabriciofx.cactoos.constraints.data;
+package com.github.fabriciofx.cactoos.constraint.person;

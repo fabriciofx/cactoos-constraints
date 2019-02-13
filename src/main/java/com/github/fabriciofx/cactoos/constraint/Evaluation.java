@@ -1,4 +1,4 @@
-package com.github.fabriciofx.cactoos.constraints;
+package com.github.fabriciofx.cactoos.constraint;
 
 import org.cactoos.list.ListOf;
 

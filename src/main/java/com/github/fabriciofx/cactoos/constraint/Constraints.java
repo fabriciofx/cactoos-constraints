@@ -1,4 +1,4 @@
-package com.github.fabriciofx.cactoos.constraints;
+package com.github.fabriciofx.cactoos.constraint;
 
 import java.util.LinkedList;
 import java.util.List;

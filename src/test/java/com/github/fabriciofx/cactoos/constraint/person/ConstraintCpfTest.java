@@ -1,5 +1,6 @@
-package com.github.fabriciofx.cactoos.constraints.data;
+package com.github.fabriciofx.cactoos.constraint.person;
 
+import com.github.fabriciofx.cactoos.constraint.person.ConstraintCpf;
 import org.hamcrest.core.IsNot;
 import org.junit.Test;
 import org.llorllale.cactoos.matchers.Assertion;
